@@ -160,6 +160,121 @@ The testbench applies an input voltage signal to the CMOS inverter, and the outp
 # Simulation Waveform
 <img width="1920" height="1080" alt="Screenshot 2026-10-29 213520" src="https://github.com/user-attachments/assets/d9cf9628-6eae-40b5-922f-43311a243452" />
 
+# Design Rule Check (DRC) Using Magic VLSI
+
+Design Rule Checking (DRC) was performed using Magic VLSI with the SKY130A Process Design Kit (PDK).
+
+The physical layout of the CMOS inverter was checked against the technology design rules to identify possible violations related to:
+
+- Minimum width of layers
+- Spacing between different layers
+- Contact and via dimensions
+- Layer enclosure requirements
+
+# DRC Verification Procedure
+
+1. Open the CMOS inverter layout in Magic VLSI.
+2. Load the SKY130A technology file.
+3. Run the DRC check on the physical layout.
+4. Inspect the DRC results displayed by Magic.
+5. Correct any reported violations and repeat the check.
+
+# DRC Verification Result
+
+DRC Result: 0 Errors
+
+Status: Successfully Completed – Zero DRC Violations.
+
+The Magic VLSI layout window displayed "DRC=0", confirming that no design rule violations were reported for the loaded CMOS inverter layout.
+#  Layout Versus Schematic (LVS) Verification
+
+Layout Versus Schematic (LVS) verification will be performed using Netgen to compare the extracted physical layout netlist with the original CMOS inverter schematic netlist.
+
+The main objective of LVS verification is to ensure that the physical layout matches the circuit schematic in terms of:
+
+- Number of transistors.
+- Transistor connections.
+- Input and output connections.
+- Power supply connections (VDD and VSS).
+- Overall circuit connectivity.
+
+# LVS Verification Procedure
+
+1. Extract the physical layout netlist from Magic VLSI.
+2. Generate the corresponding SPICE netlist.
+3. Compare the extracted layout netlist with the original Xschem netlist using Netgen.
+4. Identify and resolve any connectivity mismatches.
+ 
+LVS Verification Status
+
+Status: Pending.
+
+LVS verification using Netgen is yet to be performed. It will be carried out in the next stage of the project to confirm that the physical layout matches the original CMOS inverter schematic.
+
+#  Post-Layout Simulation
+
+Post-layout simulation will be performed using NGSpice after completing the physical layout extraction and LVS verification.
+
+The extracted SPICE netlist will be used to simulate the CMOS inverter and analyze its electrical behavior.
+
+# Post-Layout Simulation Procedure
+
+1. Extract the parasitic information from the physical layout using Magic VLSI.
+2. Generate the extracted SPICE netlist.
+3. Use NGSpice to perform post-layout transient simulation.
+4. Observe the input and output waveforms.
+5. Compare the post-layout simulation results with the pre-layout simulation results.
+
+Post-Layout Simulation Status
+
+Status: Pending.
+
+Post-layout simulation has not yet been performed. It will be carried out after completing layout extraction and LVS verification to analyze the effect of parasitic resistance and capacitance on circuit performance.
+# Results
+
+The CMOS inverter was successfully designed and simulated using Xschem and NGSpice with the SKY130A technology.
+
+The pre-layout transient simulation verified the basic operation of the CMOS inverter. The output signal changes in the opposite direction to the input signal, confirming the expected inverter functionality.
+
+The physical layout was implemented using Magic VLSI. Design Rule Check (DRC) was successfully completed with zero violations.
+
+# Project Results
+
+- CMOS inverter schematic designed using Xschem.
+- SPICE netlist generated successfully.
+- Pre-layout transient simulation completed using NGSpice.
+- PMOS and NMOS physical layout implemented using Magic VLSI.
+- DRC verification completed with zero errors.
+- Physical layout SPICE extraction generated.
+
+Remaining Work
+
+- Layout Versus Schematic (LVS) verification using Netgen – Pending.
+- Post-layout simulation using NGSpice – Pending.
+
+The remaining stages will focus on verifying the physical layout against the original schematic and analyzing the effect of parasitic components through post-layout simulation.
 
 
+Overall Project Progress
 
+The schematic design, pre-layout simulation, physical layout implementation, and DRC verification have been completed successfully.
+
+The remaining work includes LVS verification and post-layout simulation. These steps will be carried out to complete the CMOS inverter physical design flow.
+# Conclusion
+
+The CMOS Inverter Design and Physical Layout Implementation using the SKY130A Process Design Kit (PDK) provided practical experience in VLSI design and physical verification.
+
+The CMOS inverter schematic was designed using Xschem, and its functionality was verified through pre-layout simulation using NGSpice. The physical layout was implemented using Magic VLSI, and Design Rule Check (DRC) was completed successfully with zero reported violations.
+
+The SPICE netlist was also extracted from the physical layout.
+
+The remaining tasks are Layout Versus Schematic (LVS) verification using Netgen and post-layout simulation using NGSpice. These steps will help complete the physical design flow and verify the correctness and performance of the implemented layout.
+
+This project helped develop practical knowledge of schematic design, circuit simulation, physical layout implementation, and design rule verification using open-source VLSI tools.
+# References
+
+- "SkyWater SKY130 PDK" (https://skywater-pdk.readthedocs.io/)
+- "Xschem" (https://xschem.sourceforge.io/stefan/index.html)
+- "NGSpice" (https://ngspice.sourceforge.io/)
+- "Magic VLSI" (http://opencircuitdesign.com/magic/)
+- "Netgen" (http://opencircuitdesign.com/netgen/)
