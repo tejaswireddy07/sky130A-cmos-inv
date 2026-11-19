@@ -134,22 +134,24 @@ The circuit consists of two MOSFET transistors:
 
 # Schematic Design
 
-<img width="1920" height="1080" alt="Screenshot 2026-10-29 153559" src="https://github.com/user-attachments/assets/3f68b3ca-e706-429c-b2d9-d6206401b8c5" />
+<img width="1920" height="1016" alt="schematic" src="https://github.com/user-attachments/assets/80f63269-836f-41a7-b1f3-5aa9603fc2ed" />
+
 # Symbol Creation in Xschem
 
 A custom symbol for the CMOS inverter was created using **Xschem** based on the previously designed schematic.
 
 The symbol represents the CMOS inverter as a single functional block, making it easier to reuse the circuit in the testbench for simulation.
 # Symbol 
-<img width="1920" height="1080" alt="Screenshot 2026-10-29 154710" src="https://github.com/user-attachments/assets/83e1eecd-dd51-4ff1-8ad3-9d6c71d653d4" />
+<img width="1920" height="1011" alt="symbol" src="https://github.com/user-attachments/assets/076d3a50-e697-448e-ba35-fdd591fd0d14" />
+
 # CMOS Inverter Testbench in Xschem
 
 The CMOS inverter testbench was created using **Xschem** to verify the functionality of the designed CMOS inverter.
 
 The testbench uses a 1.8 V DC supply for powering the inverter and an input voltage source to apply the input signal.
 # Testbench 
+<img width="1920" height="1017" alt="symbol1" src="https://github.com/user-attachments/assets/486c1ec9-c9a0-4cf7-9080-027a5994ad3e" />
 
-<img width="1920" height="1080" alt="Screenshot 2026-10-29 165942" src="https://github.com/user-attachments/assets/ff7cea60-9c02-4a20-87eb-b1d1a59ef84b" />
 # 5. CMOS Inverter Simulation Results
 
 The CMOS inverter simulation is performed using **ngspice** to analyze the circuit behaviour and verify the NOT logic operation.
@@ -158,7 +160,8 @@ The testbench applies an input voltage signal to the CMOS inverter, and the outp
 
 
 # Simulation Waveform
-<img width="1920" height="1080" alt="Screenshot 2026-10-29 213520" src="https://github.com/user-attachments/assets/d9cf9628-6eae-40b5-922f-43311a243452" />
+<img width="1672" height="882" alt="Simulation waveform12" src="https://github.com/user-attachments/assets/30dce1fd-56f1-4d74-917c-c1da28e568b2" />
+
 ## Creating inverter layout in Magic
 
 Magic VLSI is used to create the physical layout of the CMOS inverter using the SKY130A Process Design Kit (PDK).
